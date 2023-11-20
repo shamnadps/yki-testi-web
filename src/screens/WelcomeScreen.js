@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assuming you're using react-router for navigation
+import { Link, useNavigate } from 'react-router-dom'; // Assuming you're using react-router for navigation
 import VocabularyListScreen from './VocabularyListScreen';
+import './styles/WelcomeScreen.css';
 
 const WelcomeScreen = () => {
   const navigate = useNavigate();
@@ -32,6 +33,15 @@ const WelcomeScreen = () => {
 
   return (
     <div className="container">
+      <div className="top-menu">
+        <Link to="/aboutus" className="menu-link">
+          About Us
+        </Link>
+        <Link to="/vocabularyList" className="menu-link">
+          Vocabulary List
+        </Link>
+        
+      </div>
       <div className="title-container">
         <img src={require('../assets/icons/logo_transparent.png')} alt="Logo" className="logo" />
       </div>
@@ -48,14 +58,6 @@ const WelcomeScreen = () => {
           <p className="chapter-text">Puhuminen</p>
           <p className="chapter-text">(Speaking)</p>
         </div>
-      </div>
-      <div className="menu-buttons">
-        <button className="menu-button" onClick={showAboutUs}>
-          About Us
-        </button>
-        <button className="overview-button" onClick={handleToggleOverview}>
-          Overview
-        </button>
       </div>
       {showOverview && (
         <div className="modal-container">

@@ -4,6 +4,7 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import VocabularyScreen from './screens/VocabularyScreen';
 import WritingScreen from './screens/WritingScreen';
 import SpeakingSelectionScreen from './screens/SpeakingSelectionScreen';
+import VocabularyListScreen from './screens/VocabularyListScreen';
 import AboutUs from './screens/AboutUs';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/writing" element={<WritingScreen />} />
         <Route path="/speaking" element={<SpeakingSelectionScreen />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/vocabularyList" element={<VocabularyListScreen />} />
       </Routes>
     </Router>
   );

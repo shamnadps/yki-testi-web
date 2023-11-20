@@ -1,0 +1,28 @@
+/* VocabularyListScreen.css */
+
+.vocabulary-list-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .vocabulary-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .vocabulary-list li {
+    margin-bottom: 15px;
+  }
+  
+  .vocabulary-list strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .vocabulary-list-container h2 {
+    font-size: 20px;
+    color: #9161ab;
+    margin-bottom: 15px;
+  }
+  

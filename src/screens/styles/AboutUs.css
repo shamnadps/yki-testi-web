@@ -1,0 +1,30 @@
+/* AboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 24px;
+    color: #9161ab;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .bullet-list {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .bullet-list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
