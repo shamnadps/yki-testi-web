@@ -1,10 +1,13 @@
+// SpeakingSelectionScreen.js
+
 import React from 'react';
+import './styles/SpeakingSelectionScreen.css'; // Import your CSS file for styling
 
 const SpeakingSelectionScreen = () => {
   return (
-    <div>
-      <h2>Speaking Selection Screen</h2>
-      <p>This is the Speaking Selection Screen. Replace this with your content.</p>
+    <div className="speaking-container">
+      <h2 className="speaking-header">Speaking Content</h2>
+      <p className="speaking-content">Coming soon...</p>
     </div>
   );
 };

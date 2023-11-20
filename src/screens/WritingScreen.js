@@ -1,10 +1,13 @@
+// WritingScreen.js
+
 import React from 'react';
+import './styles/WritingScreen.css'; // Import your CSS file for styling
 
 const WritingScreen = () => {
   return (
-    <div>
-      <h2>Writing Screen</h2>
-      <p>This is the Writing Screen. Replace this with your content.</p>
+    <div className="writing-container">
+      <h2 className="writing-header">Writing Screen</h2>
+      <p className="writing-content">Coming soon...</p>
     </div>
   );
 };
