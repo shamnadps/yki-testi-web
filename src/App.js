@@ -6,6 +6,9 @@ import WritingScreen from './screens/WritingScreen';
 import SpeakingSelectionScreen from './screens/SpeakingSelectionScreen';
 import VocabularyListScreen from './screens/VocabularyListScreen';
 import AboutUs from './screens/AboutUs';
+import BookScreen from './screens/BookScreen';
+import VocabScreen from './screens/VocabScreen';
+import Flashcard from './screens/FlashCard';
 
 const App = () => {
   return (
@@ -17,6 +20,9 @@ const App = () => {
         <Route path="/speaking" element={<SpeakingSelectionScreen />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/vocabularyList" element={<VocabularyListScreen />} />
+        <Route path="/book-screen" element={<BookScreen />} />
+        <Route path="/vocab-screen/:chapterNumber" element={<VocabScreen />} />
+        <Route path="/flash-card" element={<Flashcard />} />
       </Routes>
     </Router>
   );

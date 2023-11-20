@@ -1,0 +1,96 @@
+/* styles.css */
+
+.flashcard-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  }
+  
+
+  
+  .logo {
+    width: 150px; /* Adjust the dimensions as needed */
+    height: 150px; /* Adjust the dimensions as needed */
+    margin-bottom: 0;
+  }
+  
+  .progressText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .contentContainer {
+    flex: 1;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flashcardContainer {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  .flashcardFront {
+    background-color: #fff;
+    color: #4CAF50;
+  }
+  
+  .flashcardBack {
+    background-color: #4CAF50; /* Nice green color */
+
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 0;
+  }
+  
+  .button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 90px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .top-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.3)  !important;;
+  }

@@ -2,10 +2,21 @@
 
 import React from 'react';
 import './styles/AboutUs.css'; // Import your CSS file for styling
+import { Link, useLocation } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
     <div className="about-us-container">
+      <div className="top-menu">
+
+        <Link to="/" className="menu-link">
+          Home
+        </Link>
+        <Link to="/vocabularyList" className="menu-link">
+          Vocabulary List
+        </Link>
+        
+      </div>
       <h1 className="header">About Us</h1>
       <p className="description">
         Welcome to the YKI Testi app! This app is designed to assist you in preparing for the Finnish language test (YKI test).
