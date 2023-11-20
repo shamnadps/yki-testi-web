@@ -1,0 +1,19 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  
+  h1, h2 {
+    color: #ffcc00; /* Dark yellow for headings */
+  }
+  
+  p {
+    color: #ccc; /* Light gray text color */
+    line-height: 1.6;
+  }
+  
+  strong {
+    color: #ddd; /* Lighter gray for strong text */
+  }

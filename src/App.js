@@ -9,6 +9,7 @@ import AboutUs from './screens/AboutUs';
 import BookScreen from './screens/BookScreen';
 import VocabScreen from './screens/VocabScreen';
 import Flashcard from './screens/FlashCard';
+import PrivacyPolicy from './screens/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/book-screen" element={<BookScreen />} />
         <Route path="/vocab-screen/:chapterNumber" element={<VocabScreen />} />
         <Route path="/flash-card" element={<Flashcard />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </Router>
   );
