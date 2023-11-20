@@ -1,28 +1,83 @@
 /* VocabularyListScreen.css */
 
-.vocabulary-list-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+.container {
+    flex: 1;
+    padding-top: 22px;
+    margin: 10px;
+    width: 90%;
   }
   
-  .vocabulary-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .vocabulary-list li {
-    margin-bottom: 15px;
-  }
-  
-  .vocabulary-list strong {
+  .title {
+    font-size: 24px;
     font-weight: bold;
-    margin-right: 5px;
+    margin-bottom: 20px;
+    color:#3498db;
+  }
+
+
+.menuLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .menu-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  
+  .menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.3)  !important;;
   }
   
-  .vocabulary-list-container h2 {
-    font-size: 20px;
-    color: #27ae60;
-    margin-bottom: 15px;
+  .item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .answer {
+    font-size: 16px;
+  }
+  
+  .searchBar {
+    height: 40px;
+    border-color: #ccc;
+    border-width: 1px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .button {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
