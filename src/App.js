@@ -10,9 +10,16 @@ import BookScreen from './screens/BookScreen';
 import VocabScreen from './screens/VocabScreen';
 import Flashcard from './screens/FlashCard';
 import PrivacyPolicy from './screens/PrivacyPolicy';
+import PlaySettingScreen from './screens/PlaySettingScreen';
+import VocabularyTestScreen from './screens/VocabularyTestScreen';
+import PlayVocabularyScreen from './screens/PlayVocabularyScreen';
+import TestSettingScreen from './screens/TestSettingScreen';
+
+import { FailedQuestionsProvider } from './screens/FailedQuestionsContext';
 
 const App = () => {
   return (
+    <FailedQuestionsProvider>
     <Router>
       <Routes>
         <Route path="/" element={<WelcomeScreen />} />
@@ -25,8 +32,13 @@ const App = () => {
         <Route path="/vocab-screen/:chapterNumber" element={<VocabScreen />} />
         <Route path="/flash-card" element={<Flashcard />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/test-setting-screen" element={<TestSettingScreen />} />
+        <Route path="/play-setting-screen" element={<PlaySettingScreen />} />
+        <Route path="/vocabulary-test-screen" element={<VocabularyTestScreen />} />
+        <Route path="/play-vocabulary-screen" element={<PlayVocabularyScreen />} />
       </Routes>
     </Router>
+    </FailedQuestionsProvider>
   );
 };
 
