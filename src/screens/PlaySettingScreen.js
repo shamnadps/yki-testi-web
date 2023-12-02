@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'rc-slider'; // Import Slider from a React slider library
 import 'rc-slider/assets/index.css'; // Import styles for the slider
 import { Link, useNavigate } from 'react-router-dom'; 
+import './styles/PlaySettingScreen.css';
 
 const categories = [
   { id: 'A1', label: 'Finnish A1', selected: true },
@@ -53,29 +54,32 @@ const PlaySettingScreen = () => {
 
   const renderCategoryItem = ({ item }) => (
     <div
-      style={styles.categoryItem}
+      className="categoryItem"
       onClick={() => toggleCategory(item.id)}
     >
-      <span style={styles.categoryText}>{item.label}</span>
-      <div style={styles.checkbox}>
+      <span className="categoryText">{item.label}</span>
+      <div className="checkbox">
         {selectedCategories.includes(item.id) ? <span>&#10003;</span> : null}
       </div>
     </div>
   );
 
   return (
-    <div style={styles.container}>
-        <div className="top-menu">
+    <div className="container">
+      <div className="top-menu">
+      <Link to="/vocabulary" className="menu-link">
+          Back
+        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>
         <Link to="/vocabularyList" className="menu-link">
           Vocabulary List
         </Link>
-        
       </div>
-      <div style={styles.setting}>
-        <div style={styles.sliderContainer}>
+      <p className="title-container">Play Vocabulary Settings</p>
+      <div className="setting">
+        <div className="sliderContainer">
           <span>Total Questions: {totalQuestions.toFixed(0)}</span>
           <Slider
             value={totalQuestions}
@@ -87,8 +91,8 @@ const PlaySettingScreen = () => {
         </div>
       </div>
 
-      <div style={styles.setting}>
-        <div style={styles.sliderContainer}>
+      <div className="setting">
+        <div className="sliderContainer">
           <span>Next Question Delay (seconds): {nextQuestionDelay}</span>
           <Slider
             value={nextQuestionDelay}
@@ -100,8 +104,8 @@ const PlaySettingScreen = () => {
         </div>
       </div>
 
-      <div style={styles.setting}>
-        <div style={styles.sliderContainer}>
+      <div className="setting">
+        <div className="sliderContainer">
           <span>Answer Delay (seconds): {answerDelay}</span>
           <Slider
             value={answerDelay}
@@ -113,8 +117,8 @@ const PlaySettingScreen = () => {
         </div>
       </div>
 
-      <div style={styles.setting}>
-        <div style={styles.sliderContainer}>
+      <div className="setting">
+        <div className="sliderContainer">
           <span>Speech Rate: {speechRate.toFixed(1)}</span>
           <Slider
             value={speechRate}
@@ -126,92 +130,17 @@ const PlaySettingScreen = () => {
         </div>
       </div>
 
-      <div style={styles.categoryContainer}>
+      <div className="categoryContainer">
         {categories.map((item) => (
           <React.Fragment key={item.id}>{renderCategoryItem({ item })}</React.Fragment>
         ))}
       </div>
 
-      <div style={styles.startButton} onClick={startQuiz}>
-        <span style={styles.startButtonText}>Start</span>
+      <div className="startButton" onClick={startQuiz}>
+        <span className="startButtonText">Start</span>
       </div>
     </div>
   );
-};
-
-const styles = {
-  adView: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  container: {
-    flex: 1,
-    padding: 10,
-    backgroundColor: '#F7F7F7',
-    justifyContent: 'center',
-  },
-  setting: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-    backgroundColor: '#fff',
-    padding: '20px',
-    borderRadius: 10,
-    boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
-  },
-  sliderContainer: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    flex: 1,
-    color:'black'
-  },
-  slider: {
-    width: '100%',
-    marginTop: 10,
-  },
-  categoryContainer: {
-    marginBottom: 10,
-    color:'black'
-  },
-  categoryItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-    padding: '10px',
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    border: '1px solid #ccc',
-    color:'black'
-  },
-  categoryText: {
-    fontSize: '16px',
-    color:'black'
-  },
-  checkbox: {
-    width: '20px',
-    height: '20px',
-    border: '1px solid #007AFF',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  startButton: {
-    backgroundColor: '#6495ED',
-    padding: '10px',
-    borderRadius: '10px',
-    border: '1px solid #ccc',
-    alignItems: 'center',
-    width: '50%',
-    alignSelf: 'center',
-    cursor: 'pointer',
-  },
-  startButtonText: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: '#fff',
-  },
 };
 
 export default PlaySettingScreen;

@@ -6,6 +6,7 @@ import vocabulary_B2 from '../data/vocabulary_B2';
 import extra_vocabulary from '../data/extra_vocabulary';
 import { useFailedQuestions } from './FailedQuestionsContext';
 import { Link, useNavigate, useLocation } from 'react-router-dom'; 
+import './styles/VocabularyTestScreen.css';
 
 const VocabularyTestScreen = () => {
   const navigate = useNavigate();
@@ -14,9 +15,6 @@ const VocabularyTestScreen = () => {
 
   const { totalQuestions,
     selectedCategories } = location.state || {};
-
-  console.log("selected categories")
-  console.log(selectedCategories)
 
   const categoryToVocabulary = {
     A1: vocabulary_A1,
@@ -122,7 +120,7 @@ const VocabularyTestScreen = () => {
         options.splice(Math.floor(Math.random() * 4), 0, correctAnswer); // Insert the correct answer at a random position
   
         const questionObj = {
-          question: `Question ${currentQuestionIndex + 1}/ ${numberOfQuestions}\n\n${question}`,
+          question: `Question ${currentQuestionIndex + 1}/ ${numberOfQuestions}`,
           toSpeak:question,
           options,
           answer: correctAnswer,
@@ -225,222 +223,109 @@ const VocabularyTestScreen = () => {
   const quizFinishedBackgroundColor = hasPassed ? '#66bb6a' : '#EF5350';
 
   return (
-  <div className={styles.container}>
-    <div className="top-menu">
+    <div className="container">
+      <div className="top-menu">
+      <Link to="/test-setting-screen" className="menu-link">
+          Settings
+        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>
         <Link to="/vocabularyList" className="menu-link">
           Vocabulary List
         </Link>
-        
       </div>
-  {quizFinished ? (
-    <div>
-      <div
-        className={[
-          styles.quizFinishedContainer,
-          { backgroundColor: quizFinishedBackgroundColor },
-        ].join(' ')}
-      >
-        <div className={styles.scorePercent}>
-          {((score / questions.length) * 100).toFixed(0)}%
-        </div>
-        <div className={styles.quizFinishedText}>
-          {hasPassed ? 'Congratulations!!' : 'Better luck Next time!'}
-        </div>
-        <div className={styles.quizScoreText}>
-          Your Score: {score}/{questions.length}
-        </div>
-        <div className={hasPassed ? styles.passedText : styles.failedText}>
-          {hasPassed ? 'You Passed!' : 'You Failed!'}
-        </div>
-        <div className={styles.passingThresholdText}>
-          You need {Math.round(passingThreshold * 100)}% to pass
-        </div>
-      </div>
-      <button
-        className={styles.restartButton}
-        onClick={handleRestartButtonPress}
-      >
-        Retake Test
-      </button>
-      <button
-        className={styles.restartButton}
-        onClick={generateNewQuestionSet}
-      >
-        New Test
-      </button>
-    </div>
-  ) : (
-    <>
-      {questions.length === 0 ? (
-        // Render the "No questions available" view when vocabularyData is empty
-        <div className={styles.noQuestionsContainer}>
-          <div className={styles.noQuestionsText}>No questions available</div>
+
+      {quizFinished ? (
+        <div>
+          <div
+            className={[
+              'quizFinishedContainer',
+              { backgroundColor: quizFinishedBackgroundColor },
+            ].join(' ')}
+          >
+            <div className="scorePercent">
+              {((score / questions.length) * 100).toFixed(0)}%
+            </div>
+            <div className="quizFinishedText">
+              {hasPassed ? 'Congratulations!!' : 'Better luck Next time!'}
+            </div>
+            <div className="quizScoreText">
+              Your Score: {score}/{questions.length}
+            </div>
+            <div className={hasPassed ? 'passedText' : 'failedText'}>
+              {hasPassed ? 'You Passed!' : 'You Failed!'}
+            </div>
+            <div className="passingThresholdText">
+              You need {Math.round(passingThreshold * 100)}% to pass
+            </div>
+          </div>
+          <button className="restartButton" onClick={handleRestartButtonPress}>
+            Retake Test
+          </button>
+          <button
+            className="restartButton"
+            onClick={generateNewQuestionSet}
+          >
+            New Test
+          </button>
         </div>
       ) : (
         <>
-          <div className={styles.questionContainer}>
-            <div className={styles.questionText}>
-              {questions.length > 0 &&
-                questions[currentQuestionIndex].question}
+          {questions.length === 0 ? (
+            <div className="noQuestionsContainer">
+              <div className="noQuestionsText">No questions available</div>
             </div>
-          </div>
-          <div className={styles.optionsContainer}>
-            {questions.length > 0 &&
-              questions[currentQuestionIndex].options.map((option, index) => (
-                <button
-                  key={index}
-                  className={[
-                    styles.optionButton,
-                    selectedOption !== null &&
-                      (index === questions[currentQuestionIndex].correctAnswer
-                        ? styles.correctOption
-                        : index === selectedOption
-                        ? styles.wrongOption
-                        : null),
-                  ].join(' ')}
-                  onClick={() => handleOptionPress(index)}
-                  disabled={selectedOption !== null}
-                >
-                  <div className={styles.optionText}>{option}</div>
-                </button>
-              ))}
-          </div>
-          <button
-            className={[
-              styles.nextButton,
-              selectedOption === null && styles.nextButtonDisabled,
-            ].join(' ')}
-            onClick={handleNextButtonPress}
-            disabled={selectedOption === null}
-          >
-            Next
-          </button>
+          ) : (
+            <>
+              <div className="questionContainer">
+                <p className="questionText">
+                  {questions.length > 0 &&
+                    questions[currentQuestionIndex].question} 
+                    </p>
+                <p className="questionText">
+                    {questions.length > 0 &&
+                    questions[currentQuestionIndex].toSpeak}
+                 
+                </p>
+              </div>
+              <div className="optionsContainer">
+                {questions.length > 0 &&
+                  questions[currentQuestionIndex].options.map((option, index) => (
+                    <button
+                      key={index}
+                      className={[
+                        'optionButton',
+                        selectedOption !== null &&
+                          (index === questions[currentQuestionIndex].correctAnswer
+                            ? 'correctOption'
+                            : index === selectedOption
+                            ? 'wrongOption'
+                            : null),
+                      ].join(' ')}
+                      onClick={() => handleOptionPress(index)}
+                      disabled={selectedOption !== null}
+                    >
+                      <div className="optionText">{option}</div>
+                    </button>
+                  ))}
+              </div>
+              <button
+                className={[
+                  'nextButton',
+                  selectedOption === null && 'nextButtonDisabled',
+                ].join(' ')}
+                onClick={handleNextButtonPress}
+                disabled={selectedOption === null}
+              >
+                Next
+              </button>
+            </>
+          )}
         </>
       )}
-    </>
-  )}
-</div>
-
-);
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  quizFinishedContainer: {
-    alignItems: 'center',
-    padding: '20px',
-    borderRadius: '10px',
-  },
-  scorePercent: {
-    fontSize: '30px',
-    margin: '10px',
-  },
-  quizFinishedText: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-  quizScoreText: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    marginTop: '10px',
-    color: '#fff',
-  },
-  passedText: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    marginTop: '10px',
-    color: '#fff',
-  },
-  failedText: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    marginTop: '10px',
-    color: '#fff',
-  },
-  passingThresholdText: {
-    fontSize: '16px',
-    fontWeight: 'bold',
-    marginTop: '10px',
-    color: 'white',
-  },
-  restartButton: {
-    backgroundColor: '#6495ED',
-    padding: '15px',
-    borderRadius: '10px',
-    marginTop: '20px',
-    cursor: 'pointer',
-  },
-  restartButtonText: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: '#fff',
-    textAlign: 'center',
-  },
-  noQuestionsContainer: {
-    textAlign: 'center',
-    marginTop: '20px',
-  },
-  noQuestionsText: {
-    fontSize: '16px',
-  },
-  questionContainer: {
-    marginBottom: '20px',
-  },
-  questionText: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  optionsContainer: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  optionButton: {
-    width: '80%',
-    padding: '10px',
-    marginVertical: '10px',
-    borderRadius: '10px',
-    border: '1px solid #ccc',
-    alignItems: 'center',
-    cursor: 'pointer',
-  },
-  optionText: {
-    fontSize: '16px',
-  },
-  correctOption: {
-    backgroundColor: '#66bb6a',
-  },
-  wrongOption: {
-    backgroundColor: '#EF5350',
-  },
-  nextButton: {
-    backgroundColor: '#6495ED',
-    width: '50%',
-    padding: '10px',
-    marginVertical: '10px',
-    borderRadius: '10px',
-    border: '1px solid #ccc',
-    alignItems: 'center',
-    cursor: 'pointer',
-  },
-  nextButtonText: {
-    fontSize: '14px',
-    fontWeight: 'bold',
-    color: '#fff',
-    textAlign: 'center',
-  },
-  nextButtonDisabled: {
-    backgroundColor: '#ccc',
-    cursor: 'not-allowed',
-  },
+    </div>
+  );
 };
 
 export default VocabularyTestScreen;

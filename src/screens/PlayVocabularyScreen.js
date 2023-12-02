@@ -5,6 +5,7 @@ import vocabulary_A2 from '../data/vocabulary_A2';
 import vocabulary_B1 from '../data/vocabulary_B1';
 import vocabulary_B2 from '../data/vocabulary_B2';
 import extra_vocabulary from '../data/extra_vocabulary';
+import './styles/PlayVocabularyScreen.css';
 
 const PlayVocabularyScreen = () => {
 
@@ -93,7 +94,7 @@ const PlayVocabularyScreen = () => {
         options.splice(Math.floor(Math.random() * 4), 0, correctAnswer); // Insert the correct answer at a random position
   
         const questionObj = {
-          question: `Question ${currentQuestionIndex + 1}/ ${numberOfQuestions}\n\n${question}`,
+          question: `Question ${currentQuestionIndex + 1}/ ${numberOfQuestions}`,
           toSpeak: question,
           options,
           answer: correctAnswer,
@@ -172,60 +173,61 @@ const PlayVocabularyScreen = () => {
 
   return (
     <div className="container">
-        <div className="top-menu">
+      <div className="top-menu">
+      <Link to="/play-setting-screen" className="menu-link">
+          Settings
+        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>
         <Link to="/vocabularyList" className="menu-link">
           Vocabulary List
         </Link>
-        
       </div>
+
       {quizFinished ? (
         <div>
           <div>
             {/* Empty div */}
           </div>
-          <button
-            style={styles.restartButton}
-            onClick={handleRestartButtonPress}
-          >
+          <button className="restartButton" onClick={handleRestartButtonPress}>
             Replay
           </button>
-          <button
-            style={styles.restartButton}
-            onClick={generateNewQuestionSet}
-          >
+          <button className="restartButton" onClick={generateNewQuestionSet}>
             Start new Set
           </button>
         </div>
       ) : (
         <>
-          <div style={styles.questionContainer}>
-            <p style={styles.questionText}>
+          <div className="questionContainer">
+            <p className="questionText">
               {questions.length > 0 && questions[currentQuestionIndex].question}
             </p>
+            <p className="questionText">
+              {questions.length > 0 && questions[currentQuestionIndex].toSpeak}
+            </p>
           </div>
-          <div style={styles.optionsContainer}>
-          {questions.length > 0 && questions[currentQuestionIndex].options.map((option, index) => (
-            <button
-                key={index}
-                className={`${styles.optionButton} ${
-                selectedOption !== null &&
-                (index === questions[currentQuestionIndex].correctAnswer
-                    ? styles.correctOption
-                    : index === selectedOption
-                    ? null
-                    : null)
-                }`}
-                disabled={selectedOption !== null}
-            >
-                {option}
-            </button>
-            ))}
+          <div className="optionsContainer">
+            {questions.length > 0 &&
+              questions[currentQuestionIndex].options.map((option, index) => (
+                <button
+                  key={index}
+                  className={`optionButton ${
+                    selectedOption !== null &&
+                    (index === questions[currentQuestionIndex].correctAnswer
+                      ? 'correctOption'
+                      : index === selectedOption
+                      ? null
+                      : null)
+                  }`}
+                  disabled={selectedOption !== null}
+                >
+                  {option}
+                </button>
+              ))}
           </div>
           <button
-            style={styles.nextButton}
+            className="nextButton"
             onClick={togglePause}
             disabled={selectedOption === null}
           >
@@ -233,60 +235,14 @@ const PlayVocabularyScreen = () => {
           </button>
         </>
       )}
-      {/* Adjust the styling and layout according to your web application requirements */}
-      <div style={styles.bannerAd}>
+
+      {/* Your Banner Ad Component */}
+      <div className="bannerAd">
         {/* Your Banner Ad Component */}
       </div>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    flex: 1,
-    padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  questionContainer: {
-    marginBottom: 20,
-  },
-  questionText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  optionsContainer: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  optionButton: {
-    width: '80%',
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    alignItems: 'center',
-  },
-  selectedOption: {
-    backgroundColor: '#66bb6a', // Green for correct answers
-  },
-  nextButton: {
-    backgroundColor: '#007AFF',
-    padding: 15,
-    borderRadius: 10,
-    marginTop: 20,
-  },
-  restartButton: {
-    backgroundColor: '#6495ED',
-    padding: 15,
-    borderRadius: 10,
-    marginTop: 20,
-  },
-  bannerAd: {
-    /* Your Banner Ad styling */
-  },
-};
 
 export default PlayVocabularyScreen;
