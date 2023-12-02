@@ -1,0 +1,169 @@
+/* TestWriting.css */
+
+.container {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .noQuestionsContainer {
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .noQuestionsText {
+    font-size: 18px;
+  }
+  
+  .scrollContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .questionContainer {
+    margin-bottom: 10px;
+    width: 98%;
+  }
+  
+  .questionText {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .answerContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .input {
+    height: 30px;
+    width: 90%;
+    border: 1px solid gray;
+  }
+  
+  .correct {
+    border-color: green;
+  }
+  
+  .incorrect {
+    border-color: red;
+  }
+  
+  .resultIcon {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+  }
+  
+  .correctAnswerContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .wrongResultText {
+    font-size: 16px;
+    width: 90%;
+    color: red;
+    text-align: left;
+  }
+  
+  .resultText {
+    font-size: 16px;
+    color: green;
+    text-align: left;
+  }
+  
+  .voiceIcon {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .bottomContainer {
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .countText {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 150px;
+  }
+  
+  .submitButton,
+  .clearButton {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .submitButton {
+    background-color: #4CAF50;
+    color: white;
+    width: 50%;
+  }
+  
+  .clearButton {
+    background-color: #f44336;
+    color: white;
+    width: 40%;
+  }
+  
+  .modalContainer {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  
+  .modalCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .modalCloseIcon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    resize-mode: contain;
+  }
+  
+  .modalContent {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .overviewButton {
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .overviewIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  

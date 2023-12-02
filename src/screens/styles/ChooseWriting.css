@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scrollcontainer {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .chapterTile {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    elevation: 5;
+  }
+  
+  .titleContainer {
+    margin-top: 0;
+    align-items: center;
+    flex: 2;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .chapterText {
+    font-size: 18px;
+    color: #9161ab;
+  }
+  

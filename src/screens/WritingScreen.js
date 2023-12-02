@@ -13,7 +13,7 @@ const WritingScreen = () => {
     const navigate = useNavigate();
 
   const navigateToChooseWriting = (content) => {
-    navigate('/choose-writing', { content });
+    navigate('/choose-writing', { state: {content }});
   };
 
 
