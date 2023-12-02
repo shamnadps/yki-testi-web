@@ -1,17 +1,15 @@
 import React from 'react';
 import './styles/SpeakingSelectionScreen.css'; // Import your CSS file for styling
 import { Link, useNavigate } from 'react-router-dom'; // Assuming you're using react-router for navigation
-import { useTranslation } from 'react-i18next';
 import speaking from '../data/speaking/speaking';
 import conversations from '../data/conversations/conversations';
 
 
 const SpeakingSelectionScreen = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const navigateToSpeakingScreen = (content) => {
-    navigate('/speaking-screen', { speaking: content });
+    navigate('/speaking-screen', {state:{ speaking: content }});
   };
 
   return (

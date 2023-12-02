@@ -18,6 +18,8 @@ import WriteVocabulary from './screens/WriteVocabulary';
 import WriteVocabularySettings from './screens/WriteVocabularySettings';
 import ChooseWriting from './screens/ChooseWriting';
 import TestWriting from './screens/TestWriting';
+import SpeakingScreen from './screens/SpeakingScreen';
+import ContentScreen from './screens/ContentScreen';
 import { FailedQuestionsProvider } from './screens/FailedQuestionsContext';
 
 const App = () => {
@@ -43,6 +45,8 @@ const App = () => {
         <Route path="/write-vocabulary-settings" element={<WriteVocabularySettings />} />
         <Route path="/choose-writing" element={<ChooseWriting />} />
         <Route path="/test-writing" element={<TestWriting />} />
+        <Route path="/speaking-screen" element={<SpeakingScreen />} />
+        <Route path="/content-screen" element={<ContentScreen />} />
       </Routes>
     </Router>
     </FailedQuestionsProvider>

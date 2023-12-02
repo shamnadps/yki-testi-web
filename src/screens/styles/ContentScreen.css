@@ -1,0 +1,41 @@
+/* mystyles.css */
+
+.contentContainer {
+    flex: 1;
+    padding-top: 22px;
+    margin: 10px;
+    width: 90%;
+  }
+  .content-line {
+    width: 100%;
+  }
+  .row {
+    /* Add your styles for the row */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    padding: auto;
+    
+  }
+  
+  .text {
+    /* Add your styles for the text input */
+  }
+  
+  .evenText {
+    /* Add your styles for evenText */
+  }
+  
+  .buttonContainer {
+    /* Add your styles for the button container */
+    margin-left: auto;
+    width: 10%;
+  }
+  
+  .image {
+    /* Add your styles for the image */
+    width: 20px; /* Adjust the width according to your design */
+    height: 20px; /* Adjust the height according to your design */
+  }
+  
