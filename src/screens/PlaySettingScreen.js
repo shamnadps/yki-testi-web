@@ -52,14 +52,16 @@ const PlaySettingScreen = () => {
     }});
 };
 
-  const renderCategoryItem = ({ item }) => (
+const renderCategoryItem = ({ item }) => (
     <div
       className="categoryItem"
       onClick={() => toggleCategory(item.id)}
     >
-      <span className="categoryText">{item.label}</span>
-      <div className="checkbox">
-        {selectedCategories.includes(item.id) ? <span>&#10003;</span> : null}
+      <div className="categoryContent">
+        <span className="categoryText">{item.label}</span>
+        <div className="checkbox">
+          {selectedCategories.includes(item.id) ? <span>&#10003;</span> : null}
+        </div>
       </div>
     </div>
   );

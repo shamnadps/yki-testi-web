@@ -1,0 +1,156 @@
+/* style.css */
+
+.container {
+    flex: 1;
+    padding: 20px;
+    width: 60%;
+  }
+  
+  .scrollContainer {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+  }
+  
+  .noQuestionsContainer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .noQuestionsText {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .questionContainer {
+    display: flex;
+    flex-direction: column; /* Change to row to have icons on the same line */
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+  
+  .icon {
+    margin-left: 5px; /* Adjust the margin as needed */
+    width: 10;
+    height: 10;
+  }
+
+  .questionText {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .input {
+    height: 20px;
+    width: 90%;
+    border-width: 1px;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .resultText {
+    font-size: 16px;
+    width: 90%;
+    color: green;
+    text-align: left;
+  }
+  
+  .wrongResultText {
+    font-size: 16px;
+    width: 90%;
+    color: red;
+    text-align: left;
+  }
+  
+  .submitButton {
+    background-color: #4caf50;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .submitButtonText {
+    color: white;
+    font-size: 16px;
+  }
+
+  .buttonContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 150px;
+  }
+  
+  .clearButton {
+    background-color: #f44336;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    width: 40%;
+  }
+  
+  .clearButtonText {
+    color: white;
+    font-size: 16px;
+
+  }
+  
+  .bottomContainer {
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .countText {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .modalContainer {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  
+  .modalCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .modalCloseIcon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    resizeMode: contain;
+  }
+  
+  .modalContent {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .overviewIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  

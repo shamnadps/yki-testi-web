@@ -1,90 +1,81 @@
-/* styles.css */
+/* setting.css */
 
-.adView {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
+.container {
     flex: 1;
     padding: 10px;
     justify-content: center;
-    width: 100%;
   }
   
-  .categoryContent {
-    display: flex; /* Use flexbox to make items in the same row */
-    justify-content: space-between; /* Add space between items, pushing the checkbox to the right */
-    align-items: center; /* Align items vertically in the center */
-  }
   .setting {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #fff;
     padding: 15px;
     border-radius: 10px;
+    elevation: 2;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
   }
   
   .sliderContainer {
     flex-direction: column;
     align-items: flex-start;
     flex: 1;
-    color: black;
   }
   
   .slider {
-    width: 50%;
-    margin-top: 5px;
+    width: 100%;
+    margin-top: 10px;
   }
   
   .categoryContainer {
-    margin-bottom: 5px;
-    color: black;
+    margin-bottom: 10px;
   }
   
   .categoryItem {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
-
+    margin-bottom: 10px;
+    padding: 10px;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #ccc;
-    color: black;
-    width: 100%;
   }
   
   .categoryText {
     font-size: 16px;
-    color: black;
   }
   
   .checkbox {
     width: 20px;
     height: 20px;
     border: 1px solid #007AFF;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .startButton {
     background-color: #6495ED;
+    width: 50%;
     padding: 10px;
+    margin-vertical: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
     align-items: center;
-    width: 50%;
-    align-self: center;
     cursor: pointer;
   }
   
   .startButtonText {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
+    text-align: center;
+  }
+  
+  .adView {
+    justify-content: center;
+    align-items: center;
   }
   

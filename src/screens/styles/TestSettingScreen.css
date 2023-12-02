@@ -11,15 +11,22 @@
     justify-content: center;
     width: 100%;
   }
+
+  .categoryContent {
+    display: flex; /* Use flexbox to make items in the same row */
+    justify-content: space-between; /* Add space between items, pushing the checkbox to the right */
+    align-items: center; /* Align items vertically in the center */
+  }
+
   
   .setting {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #fff;
     width: 50%;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
