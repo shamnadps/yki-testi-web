@@ -60,9 +60,6 @@ const TestWriting = () => {
   return (
       <div className="container">
         <div className="top-menu">
-      <Link to="/writing" className="menu-link">
-          Back
-        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>

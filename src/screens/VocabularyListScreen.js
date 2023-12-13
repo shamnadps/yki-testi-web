@@ -53,14 +53,16 @@ const VocabularyListScreen = () => {
   return (
     <div className="container">
         
-        <div className="menuLinks">
-            <Link to="/" className="menu-link">
-            Home
-            </Link>
-            <Link to="/vocabularyList" className="menu-link">
-            Vocabulary List
-            </Link>
-        </div>
+        <div className="top-menu">
+          
+        <Link to="/" className="menu-link">
+          Home
+        </Link>
+        <Link to="/vocabularyList" className="menu-link">
+          Vocabulary List
+        </Link>
+        
+      </div>
         <h1 className="title">Vocabulary List</h1>
       <input
         type="text"
@@ -69,9 +71,9 @@ const VocabularyListScreen = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <div>
+      <div className="itemDiv">
         {filteredVocabularyData.map((item, index) => (
-          <div key={index}>{renderItem({ item })}</div>
+          <div  key={index}>{renderItem({ item })}</div>
         ))}
       </div>
     </div>

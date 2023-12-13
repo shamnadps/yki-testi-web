@@ -57,9 +57,6 @@ const WriteVocabularySettings = () => {
   return (
     <div className="container">
       <div className="top-menu">
-        <Link to="/vocabulary" className="menu-link">
-          Back
-        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>

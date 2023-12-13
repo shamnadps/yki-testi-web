@@ -40,13 +40,7 @@
     padding: 10px;
     border-bottom: 1px solid #ccc;
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .item {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
+    width: 100%;
     justify-content: space-between;
   }
   
@@ -60,6 +54,9 @@
     font-size: 16px;
   }
   
+  .itemDiv {
+    width: 100%;
+  }
   .searchBar {
     height: 40px;
     border-color: #ccc;

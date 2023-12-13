@@ -30,9 +30,7 @@ const Flashcard = () => {
   return (
     <div className="flashcard-container">
         <div className="top-menu">
-        <Link to="/vocabulary" className="menu-link">
-          Back
-        </Link>
+          
         <Link to="/" className="menu-link">
           Home
         </Link>
@@ -76,7 +74,7 @@ const Flashcard = () => {
           >
             <img src={require('../assets/images/voice.png')} className="icon" alt="voice" />
           </button>
-          <button onClick={showNextCard} className="button nextButton">
+          <button onClick={showNextCard} className="button backButton">
             <img src={require('../assets/images/next.png')} className="icon" alt="next" />
           </button>
         </div>

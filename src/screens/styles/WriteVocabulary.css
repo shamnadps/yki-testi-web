@@ -26,7 +26,6 @@
   }
   
   .questionContainer {
-    display: flex;
     flex-direction: column; /* Change to row to have icons on the same line */
     align-items: flex-start; /* Adjust alignment as needed */
   }
@@ -73,7 +72,6 @@
   
   .submitButton {
     background-color: #4caf50;
-    padding: 5px;
     border-radius: 5px;
     margin-top: 20px;
     align-items: center;
@@ -83,6 +81,12 @@
   .submitButtonText {
     color: white;
     font-size: 16px;
+    line-height: 1;
+  }
+
+  .submitButton:hover {
+    background-color: green; /* Darken the background color on hover */
+    cursor: pointer;
   }
 
   .buttonContainer {
@@ -95,17 +99,22 @@
   
   .clearButton {
     background-color: #f44336;
-    padding: 5px;
     border-radius: 5px;
     margin-top: 20px;
     align-items: center;
     width: 40%;
   }
+
+  .clearButton:hover {
+    background-color: red; /* Darken the background color on hover */
+    cursor: pointer;
+  }
   
   .clearButtonText {
     color: white;
     font-size: 16px;
-
+    padding: 0;
+    line-height: 1;
   }
   
   .bottomContainer {

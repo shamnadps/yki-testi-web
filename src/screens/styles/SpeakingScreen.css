@@ -9,20 +9,9 @@
     padding: 20px;
   }
   
-  .chapterTile {
-    padding: 15px;
-    margin-vertical: 10px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    width: 250px;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    elevation: 5;
-  }
   
   .chapterText {
     font-size: 18px;
-    color: #9161AB;
+    color: #FFFFFF;
   }
   

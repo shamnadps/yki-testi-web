@@ -37,9 +37,6 @@ const WelcomeScreen = () => {
         <Link to="/aboutus" className="menu-link">
           About Us
         </Link>
-        <Link to="/privacy-policy" className="menu-link">
-          Privacy Policy
-        </Link>
         <Link to="/vocabularyList" className="menu-link">
           Vocabulary List
         </Link>

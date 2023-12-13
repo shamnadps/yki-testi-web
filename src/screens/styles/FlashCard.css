@@ -54,7 +54,6 @@
   .buttonContainer {
     display: flex;
     justify-content: space-between;
-    align-self: stretch;
     padding: 0;
   }
   
