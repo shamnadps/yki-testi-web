@@ -79,6 +79,7 @@ const ContentScreen = () => {
         </Link>
         
       </div>
+      <h1 className="title">{name}</h1>
       {lines.map((line, index) => (
         <div key={index} className="row">
           {true ? (

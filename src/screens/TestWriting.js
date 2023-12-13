@@ -66,6 +66,7 @@ const TestWriting = () => {
         <Link to="/vocabularyList" className="menu-link">
           Vocabulary List
         </Link>
+        
       </div>
         {translatedLines.length === 0 ? (
           <div className="noQuestionsContainer">
@@ -73,6 +74,7 @@ const TestWriting = () => {
           </div>
         ) : (
           <div className="scrollContainer">
+            <h1 className="title">{name}</h1>
             {translatedLines.map((question, index) => (
               <div key={index} className="questionContainer">
                 <p className="writing-questionText">{`${index + 1}. ${translatedLines[index]}`}</p>
