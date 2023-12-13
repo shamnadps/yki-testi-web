@@ -32,11 +32,24 @@ const VocabularyListScreen = () => {
         .includes(searchQuery.toLowerCase())
   );
 
+  const speakNow = (textToRead) => {
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
+  };
 
   const renderItem = ({ item }) => (
     <div className="item">
       <div>
-        <div className="question">{item.question}</div>
+        <div className="question">{item.question}
+        <img
+                      src={require('../assets/images/voice-dark.png')}
+                      style={{ width: 30, height: 30 , marginLeft: 5 }}
+                      className='voiceIcon'
+                      alt="Speak" onClick={() => speakNow(item.question)}
+                    /></div>
         <div className="answer">{item.answer}</div>
       </div>
 {/*       <button

@@ -35,10 +35,15 @@ const ContentScreen = () => {
     };
 
 
-  const speakNow =  (line, index) => {
-    if (line) {
 
-    }
+  const speakNow = (line) => {
+    
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(line);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
+    
   };
 
   const [isSpeaking, setIsSpeaking] = useState(-1);
@@ -85,7 +90,12 @@ const ContentScreen = () => {
           {true ? (
             <div className="content-line">
             <p className="text">
-              {line}
+              {line}<img
+                      src={require('../assets/images/voice-dark.png')}
+                      alt="speak"
+                      className="voiceIcon"
+                      onClick={() => speakNow(lines[index])}
+                    />
             </p>
             <p className="content-line">
               {translatedLines[index]}

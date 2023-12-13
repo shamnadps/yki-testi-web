@@ -5,12 +5,19 @@ import './styles/FlashCard.css';
 
 const Flashcard = () => {
   const location = useLocation();
-
   const { subsetflashcards, selectedChapter, vocabIndex } = location.state || {};
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const currentFlashcard = subsetflashcards[currentIndex];
   const flipCardRef = useRef(null);
+
+  const speakNow = (textToRead) => {
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
+  };
 
   const showNextCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % subsetflashcards.length);
@@ -69,6 +76,7 @@ const Flashcard = () => {
           <button
             onClick={() => {
               const textToRead = currentFlashcard.question;
+              speakNow(textToRead)
             }}
             className="button speakButton"
           >

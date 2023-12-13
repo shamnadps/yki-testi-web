@@ -89,7 +89,11 @@ const WriteVocabulary = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const speakNow = (line) => {
-
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(line);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
   };
 
   useEffect(() => {

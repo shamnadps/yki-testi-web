@@ -206,6 +206,13 @@ const VocabularyTestScreen = () => {
     }
   };
 
+  const speakNow = (textToRead) => {
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
+  };
 
   const speakQuestion = () => {
       const question = questions[currentQuestionIndex];
@@ -283,7 +290,12 @@ const VocabularyTestScreen = () => {
                 <p className="questionText">
                     {questions.length > 0 &&
                     questions[currentQuestionIndex].toSpeak}
-                 
+                 <img
+                      src={require('../assets/images/voice-dark.png')}
+                      style={{ width: 30, height: 30 , marginLeft: 5 }}
+                      className='voiceIcon'
+                      alt="Speak" onClick={() => speakNow(questions[currentQuestionIndex].toSpeak)}
+                    />
                 </p>
               </div>
               <div className="optionsContainer">

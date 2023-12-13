@@ -24,7 +24,11 @@ const TestWriting = () => {
   }, []);
 
   const speakNow = (line) => {
-
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(line);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
   };
 
 

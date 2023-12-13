@@ -111,6 +111,7 @@ const PlayVocabularyScreen = () => {
     if (questions.length > 0 && !spokenFirst) {
       const questionText = questions[0].toSpeak;
       setSpokenFirst(true);
+      speakNow(questionText)
     }
   };
 
@@ -157,10 +158,19 @@ const PlayVocabularyScreen = () => {
     handleRestartButtonPress();
   };
 
+  const speakNow = (textToRead) => {
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = "fi-FI";
+    synth.speak(utterance);
+  };
+
   const speakQuestion = () => {
     setSelectedOption(null);
     const question = questions[currentQuestionIndex + 1];
     if (question) {
+      speakNow(question.toSpeak)
     }
   };
 
