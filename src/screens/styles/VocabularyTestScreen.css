@@ -13,13 +13,6 @@
     width: 100%; /* Ensure the top-menu takes the full width */
     padding: 10px;
   }
-
-
-  .quizFinishedContainer {
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-  }
   
   .scorePercent {
     font-size: 30px;
@@ -59,20 +52,28 @@
     margin-top: 10px;
     color: white;
   }
-  
+
   .restartButton {
-    background-color: #6495ED;
-    padding: 15px;
-    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
     margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    align-items: center;
     cursor: pointer;
-  }
-  
-  .restartButtonText {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
     text-align: center;
+  }
+
+  .restartButton:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Darken the background color on hover */
+    cursor: pointer;
+    color: black;
+    border: 0px solid #ccc;
+  }
+
+  .restartButtonText:hover {
+    cursor: pointer;
+    color: black;
   }
   
   .noQuestionsContainer {

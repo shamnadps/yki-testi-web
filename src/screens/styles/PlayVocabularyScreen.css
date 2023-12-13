@@ -18,6 +18,9 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    width: 95%;
+    border: 1px solid #ccc;
   }
   
   .scorePercent {
@@ -57,21 +60,6 @@
     font-weight: bold;
     margin-top: 10px;
     color: white;
-  }
-  
-  .restartButton {
-    background-color: #6495ED;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  
-  .restartButtonText {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
   }
   
   .noQuestionsContainer {

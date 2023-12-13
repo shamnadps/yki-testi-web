@@ -249,30 +249,31 @@ const VocabularyTestScreen = () => {
             ].join(' ')}
           >
             <div className="scorePercent">
-              {((score / questions.length) * 100).toFixed(0)}%
+             <h1>{((score / questions.length) * 100).toFixed(0)}%</h1> 
             </div>
             <div className="quizFinishedText">
               {hasPassed ? 'Congratulations!!' : 'Better luck Next time!'}
             </div>
-            <div className="quizScoreText">
-              Your Score: {score}/{questions.length}
-            </div>
             <div className={hasPassed ? 'passedText' : 'failedText'}>
               {hasPassed ? 'You Passed!' : 'You Failed!'}
             </div>
+            <div className="quizScoreText">
+              Your Score: {score}/{questions.length}
+            </div>
+            
             <div className="passingThresholdText">
               You need {Math.round(passingThreshold * 100)}% to pass
             </div>
           </div>
-          <button className="restartButton" onClick={handleRestartButtonPress}>
+          <div className="restartButton" onClick={handleRestartButtonPress}>
             Retake Test
-          </button>
-          <button
+          </div>
+          <div
             className="restartButton"
             onClick={generateNewQuestionSet}
           >
             New Test
-          </button>
+          </div>
         </div>
       ) : (
         <>
