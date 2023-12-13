@@ -47,9 +47,11 @@ const WriteVocabularySettings = () => {
       className="categoryItem"
       onClick={() => toggleCategory(item.id)}
     >
+      <div className="categoryContent">
       <span className="categoryText">{item.label}</span>
       <div className="checkbox">
         {selectedCategories.includes(item.id) ? <span>&#10003;</span> : null}
+      </div>
       </div>
     </div>
   );
@@ -65,6 +67,9 @@ const WriteVocabularySettings = () => {
         </Link>
       </div>
       <p className="title-container">Write Vocabulary Settings</p>
+      
+
+      <div className="categoryContainer">
       <div className="setting">
         <div className="sliderContainer">
           <span>Total Questions: {totalQuestions.toFixed(0)}</span>
@@ -78,16 +83,15 @@ const WriteVocabularySettings = () => {
           />
         </div>
       </div>
-
-      <div className="categoryContainer">
         {categories.map((item) => (
           <div key={item.id}>{renderCategoryItem({ item })}</div>
         ))}
+        <div className="startButton" onClick={startQuiz}>
+        <span className="startButtonText">Start</span>
+      </div>
       </div>
 
-      <button className="startButton" onClick={startQuiz}>
-        <span className="startButtonText">Start</span>
-      </button>
+      
 
     </div>
   );

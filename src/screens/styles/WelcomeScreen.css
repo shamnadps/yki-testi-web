@@ -25,7 +25,7 @@ body {
 
 .menu-link {
   text-decoration: none;
-  color: #fff;
+  color: #ccc;
   font-size: 16px;
   padding: 10px;
   border-radius: 5px;
@@ -40,6 +40,9 @@ body {
 .title-container {
   text-align: center;
   margin: 20px 0;
+  font-weight: bold;
+  font-size: x-large;
+  color: #3498db;
 }
 
 .logo {

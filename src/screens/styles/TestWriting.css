@@ -24,9 +24,9 @@
 
   
   .questionText {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
   }
   
   .answerContainer {
@@ -89,14 +89,7 @@
     font-size: 18px;
     font-weight: bold;
   }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin-bottom: 150px;
-  }
+
   
   .submitButton,
   .clearButton {

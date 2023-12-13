@@ -45,7 +45,7 @@ const VocabularyListScreen = () => {
           Tts.speak(item.question);
         }}
       >
-        <img src={require('../assets/images/voice.png')} alt="Voice" className={styles.icon} />
+        <img src={require('../assets/images/voice-dark.png')} alt="Voice" className={styles.icon} />
       </button> */}
     </div>
   );

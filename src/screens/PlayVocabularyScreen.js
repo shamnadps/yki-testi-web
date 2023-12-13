@@ -174,9 +174,6 @@ const PlayVocabularyScreen = () => {
   return (
     <div className="container">
       <div className="top-menu">
-      <Link to="/play-setting-screen" className="menu-link">
-          Settings
-        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>
@@ -210,7 +207,7 @@ const PlayVocabularyScreen = () => {
           <div className="optionsContainer">
             {questions.length > 0 &&
               questions[currentQuestionIndex].options.map((option, index) => (
-                <button
+                <div
                   key={index}
                   className={`optionButton ${
                     selectedOption !== null &&
@@ -223,16 +220,17 @@ const PlayVocabularyScreen = () => {
                   disabled={selectedOption !== null}
                 >
                   {option}
-                </button>
+                </div>
               ))}
-          </div>
-          <button
+              <div
             className="nextButton"
             onClick={togglePause}
             disabled={selectedOption === null}
           >
             {isPaused ? 'Resume' : 'Pause'}
-          </button>
+          </div>
+          </div>
+          
         </>
       )}
 

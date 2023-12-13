@@ -77,6 +77,9 @@ const renderCategoryItem = ({ item }) => (
         </Link>
       </div>
       <p className="title-container">Play Vocabulary Settings</p>
+
+
+      <div className="categoryContainer">
       <div className="setting">
         <div className="sliderContainer">
           <span>Total Questions: {totalQuestions.toFixed(0)}</span>
@@ -128,16 +131,15 @@ const renderCategoryItem = ({ item }) => (
           />
         </div>
       </div>
-
-      <div className="categoryContainer">
         {categories.map((item) => (
           <React.Fragment key={item.id}>{renderCategoryItem({ item })}</React.Fragment>
         ))}
-      </div>
-
-      <div className="startButton" onClick={startQuiz}>
+        <div className="startButton" onClick={startQuiz}>
         <span className="startButtonText">Start</span>
       </div>
+      </div>
+
+      
     </div>
   );
 };

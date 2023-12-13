@@ -16,45 +16,31 @@
     display: flex; /* Use flexbox to make items in the same row */
     justify-content: space-between; /* Add space between items, pushing the checkbox to the right */
     align-items: center; /* Align items vertically in the center */
+    padding: 10px;
+    cursor: pointer;
   }
-  .setting {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-  }
-  
-  .sliderContainer {
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-    color: black;
-  }
+
   
   .slider {
     width: 50%;
     margin-top: 5px;
   }
   
-  .categoryContainer {
-    margin-bottom: 5px;
-    color: black;
-  }
+
   
   .categoryItem {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 5px;
-
-    background-color: #fff;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    border: 1px solid #ccc;
-    color: black;
+    color: white;
     width: 100%;
+  }
+
+  .categoryItem:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Darken the background color on hover */
   }
   
   .categoryText {
@@ -72,19 +58,21 @@
   }
   
   .startButton {
-    background-color: #6495ED;
+    width: 100%;
     padding: 10px;
+    margin-top: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
     align-items: center;
-    width: 50%;
-    align-self: center;
     cursor: pointer;
+    text-align: center;
   }
-  
-  .startButtonText {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
+
+  .startButton:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Darken the background color on hover */
+    cursor: pointer;
+    color: black;
+    border: 0px solid #ccc;
   }
+
   

@@ -64,7 +64,7 @@ const Flashcard = () => {
         </ReactCardFlip>
         <div className="buttonContainer">
           <button onClick={showPreviousCard} className="button backButton">
-            <img src={require('../assets/images/back.png')} className="icon" alt="back" />
+            <img src={require('../assets/images/back-dark.png')} className="voiceIcon" alt="back" />
           </button>
           <button
             onClick={() => {
@@ -72,10 +72,10 @@ const Flashcard = () => {
             }}
             className="button speakButton"
           >
-            <img src={require('../assets/images/voice.png')} className="icon" alt="voice" />
+            <img src={require('../assets/images/voice-dark.png')} className="voiceIcon" alt="voice" />
           </button>
           <button onClick={showNextCard} className="button backButton">
-            <img src={require('../assets/images/next.png')} className="icon" alt="next" />
+            <img src={require('../assets/images/next-dark.png')} className="voiceIcon" alt="next" />
           </button>
         </div>
       </div>

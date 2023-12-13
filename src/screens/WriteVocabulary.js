@@ -173,7 +173,7 @@ const WriteVocabulary = () => {
 
             return (
                 <div key={question} className="questionContainer">
-                <p className="questionText">
+                <p className="writing-questionText">
                   {index + 1}. {answer}
                 </p>
                 <div className="inputContainer">
@@ -188,43 +188,50 @@ const WriteVocabulary = () => {
                   />
                   {isCorrect && (
                     <img
-                      src={require('../assets/images/tick.png')}
+                      src={require('../assets/images/ok.png')}
                       style={{ width: 30, height: 30, marginLeft: 5 }}
+                      
                       alt="Correct"
                     />
                   )}
                   {isWrong && (
                     <img
-                      src={require('../assets/images/refresh.png')}
+                      src={require('../assets/images/refresh-dark.png')}
                       style={{ width: 30, height: 30, marginLeft: 5 }}
                       alt="Refresh"
+                      className='voiceIcon'
                       onClick={() => { handleSubmit(); setSubmitted(true); }}
                     />
                   )}
                 </div>          
 
                 {submitted && (isWrong || !isCorrect) && (
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '90%' }}>
-                  <p className="wrongResultText">{`Correct answer: ${question}`}</p>
-                  <p onClick={() => speakNow(question)}>
+                  <div className="correctAnswerContainer">
+                  <div className="wrongResultText">{`Correct answer: ${question}`}
+           
                     <img
-                      src={require('../assets/images/voice.png')}
+                      src={require('../assets/images/voice-dark.png')}
                       style={{ width: 30, height: 30 , marginLeft: 5 }}
-                      alt="Speak"
+                      className='voiceIcon'
+                      alt="Speak" onClick={() => speakNow(question)}
                     />
-                  </p>
+                 </div>
+                  
                 </div>
                 )}
                 {submitted && isCorrect && (
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '90%' }}>
-                  <p className="resultText">{`Correct answer: ${question}`}</p>
-                  <p onClick={() => speakNow(question)}>
+                  <div className="correctAnswerContainer">
+                  <div className="resultText">{`Correct answer: ${question}`}
+             
                     <img
-                      src={require('../assets/images/voice.png')}
+                      src={require('../assets/images/voice-dark.png')}
                       style={{ width: 30, height: 30, marginLeft: 5 }}
                       alt="Speak"
+                      className='voiceIcon'
+                      onClick={() => speakNow(question)}
                     />
-                  </p>
+                  </div>
+                  
                 </div>
                 )}
               </div>
@@ -236,12 +243,12 @@ const WriteVocabulary = () => {
             </div>
           )}
           <div className="buttonContainer">
-            <button className="submitButton" onClick={() => { handleSubmit(); setSubmitted(true); }}>
+            <div className="submitButton" onClick={() => { handleSubmit(); setSubmitted(true); }}>
               <p className="submitButtonText">Submit</p>
-            </button>
-            <button className="clearButton" onClick={handleClear}>
+            </div>
+            <div className="clearButton" onClick={handleClear}>
               <p className="clearButtonText">Clear</p>
-            </button>
+            </div>
           </div>
         </div>
       )}

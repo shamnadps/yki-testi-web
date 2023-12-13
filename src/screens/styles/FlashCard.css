@@ -43,19 +43,15 @@
   
   .flashcardFront {
     background-color: #fff;
-    color: #4CAF50;
+    cursor: pointer;
   }
   
   .flashcardBack {
     background-color: #4CAF50; /* Nice green color */
+    color: black;
+    cursor: pointer;
+  }
 
-  }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-  }
   
   .button {
     padding: 10px;
@@ -79,17 +75,9 @@
     justify-content: space-between;
     padding: 10px;
   }
-  
-  .menu-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
+  .flashcardText {
+    color: black;
   }
-  
-  .menu-link:hover {
-    background-color: rgba(255, 255, 255, 0.3)  !important;;
+  .flashcardAnswer {
+    color: white;
   }

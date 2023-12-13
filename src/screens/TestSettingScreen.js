@@ -68,29 +68,31 @@ const TestSettingScreen = () => {
         </Link>
       </div>
       <p className="title-container">Test Settings</p>
-      <div className="setting">
       
-            <div className="sliderContainer">
-              <span>Total Questions: {totalQuestions.toFixed(0)}</span>
-              <Slider
-                value={totalQuestions}
-                onChange={(value) => setTotalQuestions(value)}
-                min={1}
-                max={500}
-                step={1}
-              />
-            </div>
-          </div>
 
       <div className="categoryContainer">
+      <div className="setting">
+      
+      <div className="sliderContainer">
+        <span>Total Questions: {totalQuestions.toFixed(0)}</span>
+        <Slider
+          value={totalQuestions}
+          onChange={(value) => setTotalQuestions(value)}
+          min={1}
+          max={500}
+          step={1}
+        />
+      </div>
+</div>
             {categories.map((item) => (
               <React.Fragment key={item.id}>{renderCategoryItem({ item })}</React.Fragment>
             ))}
-          </div>
-
-      <div className="startButton" onClick={startQuiz}>
+            <div className="startButton" onClick={startQuiz}>
             <span className="startButtonText">Start</span>
           </div>
+          </div>
+
+      
     </div>
   );
 };

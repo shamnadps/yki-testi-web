@@ -225,9 +225,6 @@ const VocabularyTestScreen = () => {
   return (
     <div className="container">
       <div className="top-menu">
-      <Link to="/test-setting-screen" className="menu-link">
-          Settings
-        </Link>
         <Link to="/" className="menu-link">
           Home
         </Link>
@@ -292,7 +289,7 @@ const VocabularyTestScreen = () => {
               <div className="optionsContainer">
                 {questions.length > 0 &&
                   questions[currentQuestionIndex].options.map((option, index) => (
-                    <button
+                    <div
                       key={index}
                       className={[
                         'optionButton',
@@ -307,10 +304,9 @@ const VocabularyTestScreen = () => {
                       disabled={selectedOption !== null}
                     >
                       <div className="optionText">{option}</div>
-                    </button>
+                    </div>
                   ))}
-              </div>
-              <button
+                  <div
                 className={[
                   'nextButton',
                   selectedOption === null && 'nextButtonDisabled',
@@ -319,7 +315,9 @@ const VocabularyTestScreen = () => {
                 disabled={selectedOption === null}
               >
                 Next
-              </button>
+              </div>
+              </div>
+              
             </>
           )}
         </>

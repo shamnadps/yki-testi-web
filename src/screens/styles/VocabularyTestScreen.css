@@ -13,10 +13,7 @@
     width: 100%; /* Ensure the top-menu takes the full width */
     padding: 10px;
   }
-  
-  .menu-link {
-    margin: 0 10px; /* Adjust the margin as needed */
-  }
+
 
   .quizFinishedContainer {
     align-items: center;
@@ -86,33 +83,7 @@
   .noQuestionsText {
     font-size: 16px;
   }
-  
-  .questionContainer {
-    margin-bottom: 20px;
-  }
-  
-  .questionText {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .optionsContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .optionButton {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    align-items: center;
-    cursor: pointer;
-  }
+
   
   .optionText {
     font-size: 16px;
@@ -126,27 +97,5 @@
   .wrongOption {
     background-color: #EF5350;
   }
-  
-  .nextButton {
-    background-color: #6495ED;
-    width: 50%;
-    padding: 10px;
-    margin-vertical: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .nextButtonText {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .nextButtonDisabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
+
   

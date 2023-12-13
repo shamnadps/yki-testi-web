@@ -75,7 +75,7 @@ const TestWriting = () => {
           <div className="scrollContainer">
             {translatedLines.map((question, index) => (
               <div key={index} className="questionContainer">
-                <p className="questionText">{`${index + 1}. ${translatedLines[index]}`}</p>
+                <p className="writing-questionText">{`${index + 1}. ${translatedLines[index]}`}</p>
                 <div className="answerContainer">
                   <input
                     className={`input ${results[index] !== undefined ? (results[index] ? 'correct' : 'incorrect') : ''}`}
@@ -91,7 +91,7 @@ const TestWriting = () => {
                   )}
                   {results[index] === false && (
                     <img
-                      src={require('../assets/images/refresh.png')}
+                      src={require('../assets/images/refresh-dark.png')}
                       alt="refresh"
                       className="resultIcon"
                       onClick={() => {
@@ -103,24 +103,27 @@ const TestWriting = () => {
                 </div>
                 {results[index] === false && (
                   <div className="correctAnswerContainer">
-                    <p className="wrongResultText">{`Correct answer: ${lines[index]}`}</p>
+                    <div className="wrongResultText">{`Correct answer: ${lines[index]}`}
                     <img
-                      src={require('../assets/images/voice.png')}
+                      src={require('../assets/images/voice-dark.png')}
                       alt="speak"
                       className="voiceIcon"
                       onClick={() => speakNow(lines[index])}
                     />
+                    </div>
+                    
                   </div>
                 )}
                 {results[index] && (
                   <div className="correctAnswerContainer">
-                    <p className="resultText">{`Correct answer: ${lines[index]}`}</p>
+                    <div className="resultText">{`Correct answer: ${lines[index]}`}
                     <img
-                      src={require('../assets/images/voice.png')}
+                      src={require('../assets/images/voice-dark.png')}
                       alt="speak"
                       className="voiceIcon"
                       onClick={() => speakNow(lines[index])}
-                    />
+                    /></div>
+                    
                   </div>
                 )}
               </div>
@@ -131,15 +134,15 @@ const TestWriting = () => {
               </div>
             )}
             <div className="buttonContainer">
-              <button className="submitButton" onClick={() => {
+              <div className="submitButton" onClick={() => {
                 handleSubmit();
                 setSubmitted(true);
               }}>
-                Submit
-              </button>
-              <button className="clearButton" onClick={handleClear}>
-                Clear
-              </button>
+                <p className="submitButtonText">Submit</p>
+              </div>
+              <div className="clearButton" onClick={handleClear}>
+              <p className="clearButtonText">Clear</p>
+              </div>
             </div>
           </div>
         )}
