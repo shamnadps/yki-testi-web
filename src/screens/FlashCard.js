@@ -36,15 +36,13 @@ const Flashcard = () => {
 
   return (
     <div className="flashcard-container">
-        <div className="top-menu">
-          
-        <Link to="/" className="menu-link">
-          Home
+      <div className="top-menu">
+        <Link to="/" >
+          <img src={require('../assets/images/home.png')} alt="About Us" className="menu-image" />
         </Link>
-        <Link to="/vocabularyList" className="menu-link">
-          Vocabulary List
+        <Link to="/vocabularyList" >
+          <img src={require('../assets/images/dictionary-dark.png')} alt="Vocabulary List" className="dictionary-image" />
         </Link>
-        
       </div>
       <div className="title-div">
         <div className="title-container">

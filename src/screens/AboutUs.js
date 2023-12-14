@@ -8,14 +8,12 @@ const AboutUs = () => {
   return (
     <div className="about-us-container">
       <div className="top-menu">
-
-        <Link to="/" className="menu-link">
-          Home
+        <Link to="/" >
+          <img src={require('../assets/images/home.png')} alt="About Us" className="menu-image" />
         </Link>
-        <Link to="/vocabularyList" className="menu-link">
-          Vocabulary List
+        <Link to="/vocabularyList" >
+          <img src={require('../assets/images/dictionary-dark.png')} alt="Vocabulary List" className="dictionary-image" />
         </Link>
-        
       </div>
       <h1 className="header">About Us</h1>
       <p className="description">

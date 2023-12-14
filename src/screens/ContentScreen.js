@@ -75,14 +75,13 @@ const ContentScreen = () => {
 
   return (
     <div className="contentContainer">
-        <div className="top-menu">
-        <Link to="/" className="menu-link">
-          Home
+      <div className="top-menu">
+        <Link to="/" >
+          <img src={require('../assets/images/home.png')} alt="About Us" className="menu-image" />
         </Link>
-        <Link to="/vocabularyList" className="menu-link">
-          Vocabulary List
+        <Link to="/vocabularyList" >
+          <img src={require('../assets/images/dictionary-dark.png')} alt="Vocabulary List" className="dictionary-image" />
         </Link>
-        
       </div>
       <h1 className="title">{name}</h1>
       {lines.map((line, index) => (

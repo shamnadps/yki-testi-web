@@ -31,17 +31,17 @@ const VocabularyScreen = () => {
 
   return (
     <div className="container">
-        <div className="top-menu">
-        <Link to="/" className="menu-link">
-          Home
+      <div className="top-menu">
+        <Link to="/" >
+          <img src={require('../assets/images/home.png')} alt="About Us" className="menu-image" />
         </Link>
-        <Link to="/vocabularyList" className="menu-link">
-          Vocabulary List
+        <Link to="/vocabularyList" >
+          <img src={require('../assets/images/dictionary-dark.png')} alt="Vocabulary List" className="dictionary-image" />
         </Link>
-        
       </div>
       <div className="title-container">
         <img src={require('../assets/icons/logo.png')} alt="Logo" className="logo" />
+        <div className='page-title'>Vocabulary</div>
       </div>
       <div className="book-selector">
         <div className="chapter-tile" onClick={learnVocabulary}>
