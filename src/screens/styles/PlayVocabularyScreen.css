@@ -1,19 +1,5 @@
 /* styles.css */
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .top-menu {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Ensure the top-menu takes the full width */
-    padding: 10px;
-  }
-
   .quizFinishedContainer {
     align-items: center;
     padding: 20px;

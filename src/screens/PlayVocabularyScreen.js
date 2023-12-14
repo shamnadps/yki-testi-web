@@ -248,17 +248,6 @@ const PlayVocabularyScreen = () => {
       <div className="bannerAd">
         {/* Your Banner Ad Component */}
       </div>
-      <div className="app-links">
-        <div className="app-links-row1">Download the app for a better user experience!.</div>
-        <div className="app-links-row2">
-        <a href="https://apps.apple.com/fi/app/yki-test/id6468961028" target="_blank">
-          <img src={require('../assets/images/app-logo-store.png')} alt="Download on the App Store" className="store-badge" />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.YKITest&pcampaignid=web_share" target="_blank">
-          <img src={require('../assets/images/android-logo.png')} alt="Get it on Google Play" className="store-badge" />
-        </a>
-        </div>
-      </div>
     </div>
   );
 };

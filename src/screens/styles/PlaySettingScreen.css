@@ -5,13 +5,6 @@
     align-items: center;
   }
   
-  .container {
-    flex: 1;
-    padding: 10px;
-    justify-content: center;
-    width: 100%;
-  }
-  
   .categoryContent {
     display: flex; /* Use flexbox to make items in the same row */
     justify-content: space-between; /* Add space between items, pushing the checkbox to the right */

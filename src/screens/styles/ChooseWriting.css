@@ -1,8 +1,4 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   .scrollcontainer {
     flex-grow: 1;

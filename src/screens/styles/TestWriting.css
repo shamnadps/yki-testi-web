@@ -1,10 +1,4 @@
 /* TestWriting.css */
-
-.container {
-    flex: 1;
-    padding: 20px;
-    width: 100%;
-  }
   
   .noQuestionsContainer {
     height: 50%;
@@ -78,6 +72,7 @@
     height: 35px;
     margin-left: 5px;
     cursor: pointer;
+    margin-bottom: -10px;
   }
   
   .bottomContainer {
