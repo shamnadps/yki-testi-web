@@ -17,6 +17,32 @@ body {
   padding: 20px;
 }
 
+
+.page-title {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  color:#ccc;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.app-links {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align children to the end (bottom) of the container */
+  align-items: center;
+  padding: 10px;
+}
+
+.app-links-row1 {
+  margin-bottom: 10px; /* Add margin to separate it from the links below */
+}
+
 .top-menu {
   display: flex;
   justify-content: space-between;
@@ -46,8 +72,13 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.app-links {
+  margin-top: 20px;
 }
 
 .book-selector {
@@ -55,6 +86,16 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+}
+.store-badge {
+  width: 150px;
+  height: 50px;
+  margin: 10px;
 }
 
 .chapter-tile {

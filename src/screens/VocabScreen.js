@@ -46,7 +46,7 @@ const { chapterNumber, selectedChapter } = location.state || {};
         
       </div>
       <div className="title-container">
-        <img src={require('../assets/icons/logo_transparent.png')} className="logo" alt="logo" />
+        <img src={require('../assets/icons/logo.png')} className="logo" alt="logo" />
       </div>
       <div className="scrollContainer">
         <div className="scrollContent">

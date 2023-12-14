@@ -41,7 +41,7 @@ const VocabularyScreen = () => {
         
       </div>
       <div className="title-container">
-        <img src={require('../assets/icons/logo_transparent.png')} alt="Logo" className="logo" />
+        <img src={require('../assets/icons/logo.png')} alt="Logo" className="logo" />
       </div>
       <div className="book-selector">
         <div className="chapter-tile" onClick={learnVocabulary}>
@@ -61,6 +61,7 @@ const VocabularyScreen = () => {
           <p className="chapterText">(Write Vocabulary)</p>
         </div>
       </div>
+      
     </div>
   );
 };

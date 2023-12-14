@@ -39,7 +39,7 @@ const ChooseWriting = () => {
       </div>
       <div className="titleContainer">
         <img
-          src={require('../assets/icons/logo_transparent.png')}
+          src={require('../assets/icons/logo.png')}
           alt="Logo"
           className="logo"
         />

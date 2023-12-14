@@ -43,32 +43,35 @@ const WelcomeScreen = () => {
         
       </div>
       <div className="title-container">
-        <img src={require('../assets/icons/logo_transparent.png')} alt="Logo" className="logo" />
+        <img src={require('../assets/icons/logo.png')} alt="Logo" className="logo" />
+        <div className='page-title'>Welcome to the YKI Test app! <br/>This app is designed to assist you prepare for the Finnish language test (YKI test).</div>
       </div>
+      
       <div className="book-selector">
         <div className="chapter-tile" onClick={vocabulary}>
-          <p className="chapter-text">Sanastoa</p>
-          <p className="chapter-text">(Vocabulary)</p>
+          <p className="chapterText">Sanastoa</p>
+          <p className="chapterText">(Vocabulary)</p>
         </div>
         <div className="chapter-tile" onClick={writing}>
-          <p className="chapter-text">Kirjoittaminen</p>
-          <p className="chapter-text">(Writing)</p>
+          <p className="chapterText">Kirjoittaminen</p>
+          <p className="cchapterText">(Writing)</p>
         </div>
         <div className="chapter-tile" onClick={speaking}>
-          <p className="chapter-text">Puhuminen</p>
-          <p className="chapter-text">(Speaking)</p>
+          <p className="chapterText">Puhuminen</p>
+          <p className="chapterText">(Speaking)</p>
         </div>
       </div>
-      {showOverview && (
-        <div className="modal-container">
-          <button className="modal-close-button" onClick={handleToggleOverview}>
-            Close
-          </button>
-          <div className="modal-content">
-            <VocabularyListScreen />
-          </div>
+      <div className="app-links">
+        <div className="app-links-row1">Download the app for a better user experience!.</div>
+        <div className="app-links-row2">
+        <a href="https://apps.apple.com/fi/app/yki-test/id6468961028" target="_blank">
+          <img src={require('../assets/images/app-logo-store.png')} alt="Download on the App Store" className="store-badge" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.YKITest&pcampaignid=web_share" target="_blank">
+          <img src={require('../assets/images/android-logo.png')} alt="Get it on Google Play" className="store-badge" />
+        </a>
         </div>
-      )}
+      </div>
     </div>
   );
 };

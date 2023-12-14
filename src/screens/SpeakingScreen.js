@@ -37,7 +37,7 @@ const SpeakingScreen = () => {
         
       </div>
       <div className="titleContainer">
-        <img src={require('../assets/icons/logo_transparent.png')} style={{ width: '200px', height: '200px' }} />
+        <img src={require('../assets/icons/logo.png')} className="logo" />
       </div>
       <div className="scrollcontainer">
         {fi_speaking.map((file, index) => (

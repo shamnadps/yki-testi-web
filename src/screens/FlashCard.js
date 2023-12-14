@@ -48,7 +48,7 @@ const Flashcard = () => {
       </div>
       <div className="title-div">
         <div className="title-container">
-          <img src={require('../assets/icons/logo_transparent.png')} className="logo" alt="logo" />
+          <img src={require('../assets/icons/logo.png')} className="logo" alt="logo" />
         </div>
         <p className="title-container">Vocabulary Section {vocabIndex}</p>
         <p className="title-container">
@@ -87,6 +87,7 @@ const Flashcard = () => {
           </button>
         </div>
       </div>
+      
     </div>
   );
 };

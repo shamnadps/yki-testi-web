@@ -335,6 +335,7 @@ const VocabularyTestScreen = () => {
           )}
         </>
       )}
+      
     </div>
   );
 };
