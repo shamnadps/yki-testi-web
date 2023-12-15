@@ -6,7 +6,7 @@ import './styles/PrivacyPolicy.css';
 const PrivacyPolicy = () => {
   return (
     <div>
-      <h1>Privacy Policy for YKI Testi</h1>
+      <h1>Privacy Policy for YKI Test</h1>
 
       <p>Last updated: 14.Dec.2023</p>
 

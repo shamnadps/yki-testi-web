@@ -17,7 +17,7 @@ const AboutUs = () => {
       </div>
       <h1 className="header">About Us</h1>
       <p className="description">
-        Welcome to the YKI Testi app! This app is designed to assist you in preparing for the Finnish language test (YKI test).
+        Welcome to the YKI Test app! This app is designed to assist you in preparing for the Finnish language test (YKI test).
       </p>
       <p className="description">
         This app helps you to:
