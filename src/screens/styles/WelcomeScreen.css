@@ -11,6 +11,11 @@ body {
   color: #fff;
 }
 
+.dict-link {
+  display: flex; /* Align block-level elements */
+  align-items: center; /* Center elements horizontally */
+}
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -51,15 +56,8 @@ body {
 }
 
 .app-links {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 25%;
   width: 50%;
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: flex-end; /* Align children to the end (bottom) of the container */
-  align-items: center;
   padding: 10px;
 }
 

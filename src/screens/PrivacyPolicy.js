@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
     <div>
       <h1>Privacy Policy for YKI Testi</h1>
 
-      <p>Last updated: 20.Nov.2023</p>
+      <p>Last updated: 14.Dec.2023</p>
 
       <p>
          This page informs you of our policies regarding the collection, use, and disclosure of Personal Information when you use our App.

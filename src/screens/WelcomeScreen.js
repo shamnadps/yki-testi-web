@@ -37,7 +37,7 @@ const WelcomeScreen = () => {
         <Link to="/aboutus" >
         <img src={require('../assets/images/info-dark.png')} alt="About Us" className="menu-image" />
         </Link>
-        <Link to="/vocabularyList" >
+        <Link to="/vocabularyList" className='dict-link'>
         <img src={require('../assets/images/dictionary-dark.png')} alt="Vocabulary List" className="dictionary-image" />
         </Link>
       </div>
