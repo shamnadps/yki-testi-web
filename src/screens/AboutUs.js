@@ -5,6 +5,12 @@ import './styles/AboutUs.css'; // Import your CSS file for styling
 import { Link, useLocation } from 'react-router-dom';
 
 const AboutUs = () => {
+
+  const instagramMessage = () => {
+    const instagramURL = `https://www.instagram.com/ykitestapp/`;
+    window.open(instagramURL, '_blank');
+  };
+
   return (
     <div className="about-us-container">
       <div className="top-menu">
@@ -33,8 +39,14 @@ const AboutUs = () => {
         Our goal is to provide a user-friendly platform that adapts to your learning speed and offers valuable tools to enhance your Finnish language proficiency.
       </p>
       <p className="description">
-        We are constantly trying to improve the app and provide the best experience for you. Please don't hesitate to leave constructive feedback, and we will strive to enhance the app based on your input.
+        We are constantly trying to improve the app and provide the best experience for you.
       </p>
+      <p className="description">
+      Please don't hesitate to leave your feedback on our instagram page.
+      </p>
+      <div onClick={instagramMessage}>
+        <img src={require('../assets/images/insta-icon.png')} alt="Instagram" className="insta-image" />
+      </div>
       <p className="description">
         Happy learning!
       </p>
